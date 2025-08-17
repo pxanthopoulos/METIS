@@ -56,7 +56,7 @@ endif
 ifneq ($(openmp), not-set)
     CONFIG_FLAGS += -DOPENMP=$(openmp)
 endif
-ifneq ($(shared), not-set)
+ifeq ($(shared), 1)
     CONFIG_FLAGS += -DSHARED=1
 endif
 ifneq ($(cc), not-set)
